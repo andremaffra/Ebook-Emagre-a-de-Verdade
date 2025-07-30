@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Obrigado! Seu eBook está pronto - Emagreça de Verdade</title>
+    <meta name="description" content="Parabéns! Sua compra foi confirmada. Faça o download do seu eBook e comece sua transformação agora mesmo.">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .thank-you-page {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem 0;
+        }
+        
+        .thank-you-container {
+            background: white;
+            border-radius: 20px;
+            padding: 3rem;
+            max-width: 600px;
+            width: 100%;
+            margin: 0 1rem;
+            text-align: center;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+        }
+        
+        .success-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(45deg, #4CAF50, #45a049);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 2rem;
+            animation: pulse 2s infinite;
+        }
+        
+        .success-icon i {
+            font-size: 2.5rem;
+            color: white;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+        
+        .thank-you-title {
+            font-size: 2.5rem;
+            color: #2c3e50;
+            margin-bottom: 1rem;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+        }
+        
+        .thank-you-subtitle {
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+        
+        .download-section {
+            background: #f8f9fa;
+            border-radius: 15px;
+            padding: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .download-title {
+            font-size: 1.5rem;
+            color: #2c3e50;
+            margin-bottom: 1rem;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+        }
+        
+        .download-button {
+            background: linear-gradient(45deg, #4CAF50, #45a049);
+            color: white;
+            border: none;
+            padding: 1.2rem 2.5rem;
+            font-size: 1.2rem;
+            font-weight: 600;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.8rem;
+            text-decoration: none;
+            font-family: 'Montserrat', sans-serif;
+            margin-bottom: 1rem;
+        }
+        
+        .download-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(76, 175, 80, 0.3);
+        }
+        
+        .download-info {
+            font-size: 0.9rem;
+            color: #666;
+            margin-top: 1rem;
+        }
+        
+        .next-steps {
+            text-align: left;
+            margin: 2rem 0;
+        }
+        
+        .next-steps h3 {
+            font-size: 1.3rem;
+            color: #2c3e50;
+            margin-bottom: 1rem;
+            font-family: 'Montserrat', sans-serif;
+        }
+        
+        .step-list {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .step-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 1rem;
+            padding: 1rem;
+            background: #f8f9fa;
+            border-radius: 10px;
+        }
+        
+        .step-number {
+            background: #4CAF50;
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            margin-right: 1rem;
+            flex-shrink: 0;
+        }
+        
+        .step-content {
+            flex: 1;
+        }
+        
+        .step-title {
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 0.3rem;
+        }
+        
+        .step-description {
+            color: #666;
+            font-size: 0.9rem;
+        }
+        
+        .support-section {
+            background: #e8f5e8;
+            border-radius: 15px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .support-title {
+            font-size: 1.2rem;
+            color: #2c3e50;
+            margin-bottom: 0.5rem;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+        }
+        
+        .support-text {
+            color: #666;
+            margin-bottom: 1rem;
+        }
+        
+        .support-contact {
+            color: #4CAF50;
+            font-weight: 600;
+            text-decoration: none;
+        }
+        
+        .social-share {
+            margin: 2rem 0;
+        }
+        
+        .social-share h3 {
+            font-size: 1.2rem;
+            color: #2c3e50;
+            margin-bottom: 1rem;
+            font-family: 'Montserrat', sans-serif;
+        }
+        
+        .social-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+        
+        .social-button {
+            padding: 0.8rem 1.5rem;
+            border-radius: 25px;
+            text-decoration: none;
+            color: white;
+            font-weight: 600;
+            transition: transform 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .social-button:hover {
+            transform: translateY(-2px);
+        }
+        
+        .facebook { background: #3b5998; }
+        .twitter { background: #1da1f2; }
+        .whatsapp { background: #25d366; }
+        
+        .bonus-section {
+            background: linear-gradient(45deg, #FF9800, #F57C00);
+            color: white;
+            border-radius: 15px;
+            padding: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .bonus-title {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+        }
+        
+        .bonus-text {
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+        
+        .bonus-button {
+            background: white;
+            color: #FF9800;
+            border: none;
+            padding: 1rem 2rem;
+            font-size: 1rem;
+            font-weight: 600;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+        
+        .bonus-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        
+        @media (max-width: 768px) {
+            .thank-you-container {
+                padding: 2rem 1.5rem;
+                margin: 0 0.5rem;
+            }
+            
+            .thank-you-title {
+                font-size: 2rem;
+            }
+            
+            .social-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .social-button {
+                width: 200px;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="thank-you-page">
+        <div class="thank-you-container">
+            <div class="success-icon">
+                <i class="fas fa-check"></i>
+            </div>
+            
+            <h1 class="thank-you-title">Parabéns!</h1>
+            <p class="thank-you-subtitle">
+                Sua compra foi confirmada com sucesso! Agora você tem acesso ao guia completo 
+                "Emagreça de Verdade" e pode começar sua transformação hoje mesmo.
+            </p>
+            
+            <div class="download-section">
+                <h2 class="download-title">Faça o Download do Seu eBook</h2>
+                <a href="assets/ebook-emagreca-de-verdade.pdf" class="download-button" download onclick="trackDownload()">
+                    <i class="fas fa-download"></i>
+                    Baixar eBook Agora
+                </a>
+                <div class="download-info">
+                    <i class="fas fa-info-circle"></i>
+                    Arquivo em PDF - Compatível com todos os dispositivos
+                </div>
+            </div>
+            
+            <div class="next-steps">
+                <h3>Seus Próximos Passos:</h3>
+                <ul class="step-list">
+                    <li class="step-item">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <div class="step-title">Baixe o eBook</div>
+                            <div class="step-description">Clique no botão acima para fazer o download do arquivo PDF</div>
+                        </div>
+                    </li>
+                    <li class="step-item">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <div class="step-title">Leia com Atenção</div>
+                            <div class="step-description">Dedique tempo para absorver todo o conteúdo e fazer anotações</div>
+                        </div>
+                    </li>
+                    <li class="step-item">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <div class="step-title">Comece Hoje</div>
+                            <div class="step-description">Implemente as primeiras dicas imediatamente - pequenos passos geram grandes resultados</div>
+                        </div>
+                    </li>
+                    <li class="step-item">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <div class="step-title">Seja Consistente</div>
+                            <div class="step-description">Mantenha a disciplina e celebre cada pequena vitória no seu processo</div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="bonus-section">
+                <h3 class="bonus-title">🎁 Bônus Especial!</h3>
+                <p class="bonus-text">
+                    Como agradecimento pela sua confiança, você receberá em breve por email 
+                    um plano de treinos de 30 dias totalmente GRÁTIS!
+                </p>
+                <a href="mailto:contato@emagreçadeverdade.com?subject=Quero meu bônus" class="bonus-button">
+                    Solicitar Bônus
+                </a>
+            </div>
+            
+            <div class="support-section">
+                <h3 class="support-title">Precisa de Ajuda?</h3>
+                <p class="support-text">
+                    Nossa equipe está aqui para te apoiar em sua jornada. 
+                    Se tiver qualquer dúvida, entre em contato conosco:
+                </p>
+                <a href="mailto:suporte@emagreçadeverdade.com" class="support-contact">
+                    <i class="fas fa-envelope"></i> suporte@emagreçadeverdade.com
+                </a>
+            </div>
+            
+            <div class="social-share">
+                <h3>Compartilhe sua Conquista!</h3>
+                <div class="social-buttons">
+                    <a href="https://www.facebook.com/sharer/sharer.php?u=https://emagreçadeverdade.com" class="social-button facebook" target="_blank">
+                        <i class="fab fa-facebook-f"></i>
+                        Facebook
+                    </a>
+                    <a href="https://twitter.com/intent/tweet?text=Acabei de adquirir o guia Emagreça de Verdade! Vou transformar minha vida 💪" class="social-button twitter" target="_blank">
+                        <i class="fab fa-twitter"></i>
+                        Twitter
+                    </a>
+                    <a href="https://wa.me/?text=Acabei de comprar o eBook Emagreça de Verdade! Finalmente vou conseguir emagrecer com saúde 🎉" class="social-button whatsapp" target="_blank">
+                        <i class="fab fa-whatsapp"></i>
+                        WhatsApp
+                    </a>
+                </div>
+            </div>
+            
+            <div style="margin-top: 2rem; padding-top: 2rem; border-top: 1px solid #eee;">
+                <p style="color: #666; font-size: 0.9rem;">
+                    <i class="fas fa-shield-alt" style="color: #4CAF50;"></i>
+                    Compra protegida com garantia de 7 dias. Sua satisfação é nossa prioridade!
+                </p>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // Função para rastrear downloads
+        function trackDownload() {
+            console.log('eBook downloaded');
+            // Aqui você pode integrar com Google Analytics ou outras ferramentas
+            // gtag('event', 'download', {
+            //     event_category: 'eBook',
+            //     event_label: 'Emagreça de Verdade'
+            // });
+        }
+        
+        // Animação de entrada
+        document.addEventListener('DOMContentLoaded', function() {
+            const container = document.querySelector('.thank-you-container');
+            container.style.opacity = '0';
+            container.style.transform = 'translateY(30px)';
+            
+            setTimeout(() => {
+                container.style.transition = 'all 0.6s ease';
+                container.style.opacity = '1';
+                container.style.transform = 'translateY(0)';
+            }, 100);
+        });
+        
+        // Confetti effect (opcional)
+        function createConfetti() {
+            const colors = ['#4CAF50', '#FF9800', '#2196F3', '#E91E63'];
+            const confettiCount = 50;
+            
+            for (let i = 0; i < confettiCount; i++) {
+                const confetti = document.createElement('div');
+                confetti.style.position = 'fixed';
+                confetti.style.width = '10px';
+                confetti.style.height = '10px';
+                confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+                confetti.style.left = Math.random() * 100 + 'vw';
+                confetti.style.top = '-10px';
+                confetti.style.zIndex = '9999';
+                confetti.style.pointerEvents = 'none';
+                confetti.style.borderRadius = '50%';
+                
+                document.body.appendChild(confetti);
+                
+                const animation = confetti.animate([
+                    { transform: 'translateY(0) rotate(0deg)', opacity: 1 },
+                    { transform: 'translateY(100vh) rotate(360deg)', opacity: 0 }
+                ], {
+                    duration: Math.random() * 3000 + 2000,
+                    easing: 'linear'
+                });
+                
+                animation.onfinish = () => confetti.remove();
+            }
+        }
+        
+        // Executar confetti ao carregar a página
+        setTimeout(createConfetti, 500);
+    </script>
+</body>
+</html>
+
