@@ -15,7 +15,8 @@ ebook-site/
 ├── js/
 │   └── script.js          # Funcionalidades interativas
 ├── images/
-│   ├── ebook-cover.png    # Capa do eBook
+│   ├── ebook-cover.png    #<img width="1024" height="1536" alt="ebook_cover emagrecimento" src="https://github.com/user-attachments/assets/4101fb3c-e9e6-47c4-9c1a-87ba2dd337cd" />
+
 │   ├── ebook-pages.jpg    # Mockup das páginas
 │   ├── testimonial-1.jpg  # Foto depoimento 1
 │   ├── testimonial-2.jpg  # Foto depoimento 2
